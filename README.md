@@ -1,10 +1,12 @@
-SYNOPSIS
+# Generate Gene Models
+
+## SYNOPSIS
 
 generate_gene_modles.py is a Python script for rapidly mining the Protein Data Bank and generating representative structural models of a given human gene. The script first downloads all PDB entries associated with the gene (using the accompanying script generate_pdb_models.py). Then the script compares all PDB structures and selects representative structures optimizing for sequence coverage, structural resolution, and structural diversity (i.e. multiple conformations).
 
 
 
-USAGE
+## USAGE
 
 usage: generate_gene_models.py [-h] gene dest
 
@@ -19,7 +21,7 @@ optional arguments:
 
 
 
-INPUT
+## INPUT
 
 gene - The Uniprot Primary gene name for the human gene to generate representative structural models of
 
@@ -27,7 +29,7 @@ dest - The top-level directory in which to store the structural models of gene (
 
 
 
-OUTPUT
+## OUTPUT
 
 The output model files are stored in the 'dest' directory and are organized by PDB and then by chain. The naming system is <geneID>_<pdbID>_<chainID>. Assume you run the following command:
 
