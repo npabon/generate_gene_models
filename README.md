@@ -7,7 +7,7 @@ generate_gene_modles.py is a Python script for rapidly mining the Protein Data B
 
 
 ## USAGE
-
+```
 usage: generate_gene_models.py [-h] gene dest
 
 Mine the PDB for structural models of a gene
@@ -18,14 +18,14 @@ positional arguments:
 
 optional arguments:
   -h, --help  show this help message and exit
-
+```
 
 
 ## INPUT
 
-gene - The Uniprot Primary gene name for the human gene to generate representative structural models of
+```gene``` - The Uniprot Primary gene name for the human gene to generate representative structural models of
 
-dest - The top-level directory in which to store the structural models of gene (will be created if it doesn't already exist)
+```dest``` - The top-level directory in which to store the structural models of gene (will be created if it doesn't already exist)
 
 
 
@@ -33,10 +33,11 @@ dest - The top-level directory in which to store the structural models of gene (
 
 The output model files are stored in the 'dest' directory and are organized by PDB and then by chain. The naming system is <geneID>_<pdbID>_<chainID>. Assume you run the following command:
 
-  $ python generate_gene_models.py geneX ~/geneX
+```python generate_gene_models.py geneX ~/geneX```
 
 The directory ~/geneX would be organized as follows:
 
+```
   ~/geneX/
     representative_gene_models/           * This directory contains the representative gene models
       geneX_pdbID_chainID_iso/
@@ -53,6 +54,7 @@ The directory ~/geneX would be organized as follows:
       geneX_pdbID_molinfo.xml             * metadata from the PDB
       geneX_pdbID_pdbinfo.xml             * metadata from the PDB
     ...                                   * There may be multiple pdbIDs corresponding to geneX
+```
 
 
 
